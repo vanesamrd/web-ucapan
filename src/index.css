@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Outfit", system-ui, -apple-system, sans-serif;
+  --font-sans: "Poppins", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+  }
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translate3d(0, -10vh, 0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.95;
+  }
+  90% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translate3d(var(--drift-x, 24px), 105vh, 0) rotate(var(--spin-deg, 320deg));
+    opacity: 0;
+  }
+}
+
+.confetti-piece {
+  animation: confetti-fall var(--fall-duration, 3.2s) cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .confetti-piece {
+    animation: none;
+    display: none;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Untuk Faiz (Aic) — Selamat Wisuda",
+  "description": "Web ucapan selamat wisuda dan kilas balik perjuangan Faiz (Aic) dari maba, magang, sempro, semhas, hingga lulus.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
